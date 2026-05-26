@@ -15,8 +15,8 @@ A desktop app for translating Japanese manga text to Spanish/English in real tim
 </p>
 
 ## Download
-[⬇️ Download bp-translator (Windows — Installer)](https://github.com/isnotSenshi/bp-translator/releases/latest/download/bp-translator-Setup.exe)<br>
-[⬇️ Download bp-translator (Windows — Portable)](https://github.com/isnotSenshi/bp-translator/releases/latest/download/bp-translator-portable.exe)
+[⬇️ Download bp-translator (Windows — Installer)](https://github.com/isnotSenshi/bp-translator-v1/releases/latest/download/bp-translator-Setup.exe)<br>
+[⬇️ Download bp-translator (Windows — Portable)](https://github.com/isnotSenshi/bp-translator-v1/releases/latest/download/bp-translator-portable.exe)
 
 ---
 
@@ -74,7 +74,7 @@ pip install -r python/requirements.txt
 
 ```bash
 # Clone the repository
-git clone https://github.com/isnotSenshi/bp-translator.git
+git clone https://github.com/isnotSenshi/bp-translator-v1.git
 cd bp-translator
 
 # Install Node dependencies
