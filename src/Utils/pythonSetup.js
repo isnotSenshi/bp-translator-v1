@@ -150,7 +150,7 @@ const installDependencies = async (pythonExe, onMessage) => {
     const requirementsPath = path.join(app.getAppPath(), 'python', 'requirements.txt')
     const usingReqFile = fs.existsSync(requirementsPath)
     const args = usingReqFile
-      ? ['-m', 'pip', 'install', '-r', requirementsPath]
+      ? ['-m', 'pip', 'install', '-r', `"${requirementsPath}"`]
       : ['-m', 'pip', 'install', 'manga-ocr', 'flask', 'pillow', 'deep-translator']
 
     log(`pip args: ${args.join(' ')} (requirements.txt ${usingReqFile ? 'found' : 'not found, using fallback'})`)

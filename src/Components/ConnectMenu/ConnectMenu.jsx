@@ -12,9 +12,12 @@ const ConnectMenu = ({ lang, onBack }) => {
      const [ocrError, setOcrError] = useState(null)
      const [pythonSetupDone, setPythonSetupDone] = useState(true)
      const [isOnline, setIsOnline] = useState(false)
+     const [appVersion, setAppVersion] = useState('')
      const intervalRef = useRef(null)
 
      useEffect(() => {
+          window.api.getAppVersion().then(v => setAppVersion(v))
+
           window.api.checkPythonSetup().then(done => {
                setPythonSetupDone(done)
                if (!done) return
@@ -140,7 +143,7 @@ const ConnectMenu = ({ lang, onBack }) => {
                          </span>
                     </button>
                </div>
-               <p className='menu-made-by'>Made by <a className='menu-made-by-link' onClick={() => window.api.openExternal('https://github.com/isnotSenshi')}>sh1shn</a></p>
+               <p className='menu-made-by'>Made by <a className='menu-made-by-link' onClick={() => window.api.openExternal('https://github.com/isnotSenshi')}>sh1shn</a>{appVersion ? ` v${appVersion}` : ''}</p>
           </div>
      )
 }

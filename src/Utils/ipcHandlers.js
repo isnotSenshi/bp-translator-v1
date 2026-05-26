@@ -1,4 +1,4 @@
-import { ipcMain, desktopCapturer, screen, shell, BrowserWindow } from 'electron'
+import { ipcMain, desktopCapturer, screen, shell, BrowserWindow, app } from 'electron'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -283,6 +283,7 @@ export const registerIpcHandlers = (mainWindow) => {
   })
 
   ipcMain.handle('get-ocr-ready', () => isOcrServerReady())
+  ipcMain.handle('get-app-version', () => app.getVersion())
 
   ipcMain.handle('check-connection', () => checkInternetConnection())
 

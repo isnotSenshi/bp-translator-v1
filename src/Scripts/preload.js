@@ -20,6 +20,7 @@ contextBridge.exposeInMainWorld('api', {
   getSavedKey: (engine) => ipcRenderer.invoke('get-saved-key', engine),
   checkConnection: () => ipcRenderer.invoke('check-connection'),
   onShortcut: (fn) => ipcRenderer.on('shortcut', (e, action) => fn(action)),
+  getAppVersion: () => ipcRenderer.invoke('get-app-version'),
   checkPythonSetup: () => ipcRenderer.invoke('check-python-setup'),
   runSetup: () => ipcRenderer.invoke('run-setup'),
   onSetupProgress: (fn) => ipcRenderer.on('setup-progress', (e, data) => fn(data)),
