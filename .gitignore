@@ -1,0 +1,21 @@
+node_modules
+package-lock.json
+public/lastCrop.png
+output.txt
+sample.txt
+dist/
+
+# Python
+python/__pycache__/
+python/*.pyc
+python/*.pyo
+.env
+
+# Logs
+*.log
+logs/
+
+# Electron
+out/
+release/
+builder-effective-config.yaml

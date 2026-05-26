@@ -1,0 +1,57 @@
+.text-history {
+     border: 2px solid white;
+     border-radius: 10px;
+     width: 81.5vw;
+     height: 70vh;
+     margin: 1vw;
+     padding: 1vw;
+     color: white;
+     overflow: auto;
+     -webkit-app-region: no-drag;
+     scrollbar-width: none;
+}
+
+@keyframes blink-animation {
+     to {
+          visibility: hidden;
+     }
+}
+
+@-webkit-keyframes blink-animation {
+     to {
+          visibility: hidden;
+     }
+}
+
+.blink-text {
+     padding: 2vw;
+     animation: blink-animation 1s steps(2, start) infinite;
+     -webkit-animation: blink-animation 1s steps(2, start) infinite;
+}
+
+.normal-text {
+     padding: 2vw;
+}
+
+.normal-sub-text {
+     margin-top: -1vw;
+     margin-left: 2vw;
+     color: wheat;
+}
+
+.history-item {
+     border-radius: 8px;
+}
+
+.copyable {
+     cursor: pointer;
+     transition: opacity .15s;
+}
+
+.copyable:hover {
+     text-decoration: underline;
+}
+
+.copied {
+     opacity: 0.4;
+}

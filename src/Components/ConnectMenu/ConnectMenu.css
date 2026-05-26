@@ -1,0 +1,137 @@
+.menu-container {
+     display: flex;
+     flex-direction: column;
+     gap: 3vw;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+}
+
+.menu-title {
+     color: white;
+     font-size: 2.5vw;
+     margin: 0;
+     letter-spacing: .1vw;
+}
+
+.menu-option-button {
+     -webkit-app-region: no-drag;
+     background: none;
+     border: .15vw solid white;
+     border-radius: 1vw;
+     color: white;
+     cursor: pointer;
+     padding: 2vw 4vw;
+     font-family: inherit;
+     width: 60vw;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: .5vw;
+     transition: border-color .2s, background .2s;
+}
+
+.menu-option-button:hover {
+     border-color: wheat;
+     background: rgba(245, 222, 179, 0.05);
+}
+
+.option-label {
+     font-size: 2.5vw;
+     color: wheat;
+}
+
+.option-desc {
+     font-size: 1.5vw;
+     color: rgba(255, 255, 255, 0.5);
+}
+
+.ocr-button {
+     position: relative;
+     overflow: hidden;
+}
+
+.ocr-progress-bar {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     height: .3vw;
+     background: wheat;
+     transition: width 0.4s ease;
+     border-radius: 0 0 1vw 1vw;
+}
+
+.ocr-loading {
+     cursor: default;
+     border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ocr-loading .option-label {
+     color: rgba(245, 222, 179, 0.4);
+}
+
+.ocr-loading .option-desc {
+     color: rgba(255, 255, 255, 0.3);
+}
+
+.ocr-loading:hover {
+     border-color: rgba(255, 255, 255, 0.25);
+     background: none;
+}
+
+.ocr-error {
+     cursor: default;
+     border-color: rgba(255, 80, 80, 0.4);
+}
+
+.ocr-error .option-label {
+     color: rgba(245, 222, 179, 0.35);
+}
+
+.ocr-error .option-desc {
+     color: rgba(255, 100, 100, 0.7);
+}
+
+.ocr-error:hover {
+     border-color: rgba(255, 80, 80, 0.4);
+     background: none;
+}
+
+.menu-option-button.offline {
+     cursor: default;
+     border-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-option-button.offline .option-label {
+     color: rgba(245, 222, 179, 0.25);
+}
+
+.menu-option-button.offline .option-desc {
+     color: rgba(255, 100, 100, 0.6);
+}
+
+.menu-option-button.offline:hover {
+     border-color: rgba(255, 255, 255, 0.15);
+     background: none;
+}
+
+.menu-made-by {
+     position: absolute;
+     bottom: 2vw;
+     color: rgba(255, 255, 255, 0.3);
+     font-size: 1.8vw;
+     letter-spacing: .1vw;
+     margin: 0;
+}
+
+.menu-made-by-link {
+     -webkit-app-region: no-drag;
+     color: wheat;
+     text-decoration: none;
+     cursor: pointer;
+     transition: opacity .2s;
+}
+
+.menu-made-by-link:hover {
+     opacity: 0.7;
+}

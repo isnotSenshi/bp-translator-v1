@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+     <title>Crop Screenshot</title>
+     <style>
+          body {
+               margin: 0;
+               overflow: hidden;
+               user-select: none;
+               background: transparent
+          }
+
+          #bgcanvas,
+          #overlay {
+               position: absolute;
+               top: 0;
+               left: 0;
+               cursor: crosshair;
+          }
+
+          #okBtn {
+               position: fixed;
+               top: 20px;
+               right: 20px;
+               z-index: 20;
+               font-size: 20px;
+               padding: 6px 20px;
+          }
+     </style>
+</head>
+
+<body>
+     <canvas id="bgcanvas"></canvas>
+     <canvas id="overlay"></canvas>
+     <script src="./src/Scripts/crop.js"></script>
+</body>
+
+</html>

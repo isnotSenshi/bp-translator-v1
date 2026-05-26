@@ -1,0 +1,46 @@
+name: Build & Release (Signed)
+# DISABLED — enable this once SignPath Foundation is approved
+# To activate: change 'workflow_dispatch' trigger back to push tags
+# and fill in your SIGNPATH_ORG_ID below
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app (unsigned)
+        run: node scripts/build.mjs
+
+      - name: Sign with SignPath Foundation
+        uses: signpath/github-action-submit-signing-request@v1
+        with:
+          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+          organization-id: 'TU_ORG_ID_AQUI'
+          project-slug: 'bp-translator'
+          signing-policy-slug: 'release-signing'
+          github-artifact-id: 'unsigned-build'
+          wait-for-completion: true
+          output-artifact-directory: 'release-signed'
+
+      - name: Upload release artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release-signed/*.exe
+            release-signed/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

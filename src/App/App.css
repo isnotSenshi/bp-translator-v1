@@ -1,0 +1,20 @@
+.app-container {
+     background: rgba(0, 0, 0, 0.58);
+     border-radius: 1vw;
+     height: 100vh;
+     -webkit-border-radius: 1vw;
+     -moz-border-radius: 1vw;
+     -ms-border-radius: 1vw;
+     -o-border-radius: 1vw;
+}
+
+.app-inner {
+     padding-right: 2%;
+     display: flex;
+     height: 100vh;
+}
+
+.dialog-inner {
+     display: flex;
+     flex-direction: column;
+}

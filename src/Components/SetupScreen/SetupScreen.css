@@ -1,0 +1,124 @@
+.setup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2.5vw;
+  padding: 0 8vw;
+}
+
+.setup-title {
+  color: wheat;
+  font-size: 2.8vw;
+  margin: 0;
+  letter-spacing: 0.1vw;
+}
+
+.setup-desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6vw;
+  text-align: center;
+  margin: 0;
+  line-height: 2.4vw;
+}
+
+.setup-warn {
+  color: rgba(255, 190, 80, 0.75);
+}
+
+.setup-message {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5vw;
+  margin: 0;
+  text-align: center;
+  min-height: 2vw;
+}
+
+.setup-bar-bg {
+  width: 100%;
+  height: 0.35vw;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.setup-bar-fill {
+  height: 100%;
+  background: wheat;
+  border-radius: 1vw;
+  transition: width 0.5s ease;
+}
+
+.setup-hint {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.3vw;
+  margin: 0;
+  text-align: center;
+}
+
+.setup-actions {
+  display: flex;
+  gap: 2vw;
+}
+
+.setup-btn-primary {
+  -webkit-app-region: no-drag;
+  background: none;
+  border: 0.15vw solid wheat;
+  border-radius: 0.8vw;
+  color: wheat;
+  cursor: pointer;
+  padding: 1.2vw 3vw;
+  font-family: inherit;
+  font-size: 1.8vw;
+  transition: background 0.2s;
+}
+
+.setup-btn-primary:hover {
+  background: rgba(245, 222, 179, 0.1);
+}
+
+.setup-btn-secondary {
+  -webkit-app-region: no-drag;
+  background: none;
+  border: 0.15vw solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.8vw;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 1.2vw 3vw;
+  font-family: inherit;
+  font-size: 1.8vw;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.setup-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.setup-error {
+  color: rgba(255, 100, 100, 0.85);
+  font-size: 1.5vw;
+  text-align: center;
+  margin: 0;
+}
+
+.setup-error-hint {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.3vw;
+  text-align: center;
+  margin: 0;
+}
+
+.setup-error-hint span {
+  color: wheat;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+  text-decoration: underline;
+}
+
+.setup-error-hint code {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: monospace;
+}

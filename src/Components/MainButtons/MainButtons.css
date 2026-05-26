@@ -1,0 +1,58 @@
+.main-buttons-container {
+     padding: 2%;
+     -webkit-app-region: drag;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+}
+
+.main-buttons-column {
+     display: block;
+     width: 25%;
+}
+
+
+.main-button-img {
+     width: 48px;
+     padding: 10px;
+     user-select: none;
+     transition: border 0.2s;
+}
+
+.main-button-disabled {
+     pointer-events: none;
+     user-select: none;
+     border: 2px solid #ffffff00;
+     -webkit-app-region: no-drag;
+}
+
+.main-button {
+     cursor: pointer;
+     border: 2px solid #ffffff00;
+     -webkit-app-region: no-drag;
+}
+
+.drag-button {
+     cursor: pointer;
+     width: 48px;
+     margin-left: 10px;
+     cursor: pointer;
+     border: 2px solid #ffffff00;
+     -webkit-app-region: drag;
+}
+
+.main-button:hover {
+     border: 2px solid #fff;
+     border-radius: 8px;
+     width: 9vw;
+     -webkit-app-region: no-drag;
+}
+
+.tool-help-text {
+     display: flex;
+     justify-content: center;
+     color: wheat;
+     width: 10vw;
+     margin-top: 1vw;
+     margin-bottom: 1vw;
+}

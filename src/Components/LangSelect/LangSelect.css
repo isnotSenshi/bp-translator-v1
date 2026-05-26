@@ -1,0 +1,48 @@
+.lang-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.lang-box {
+  -webkit-app-region: no-drag;
+  background: none;
+  border: .15vw solid white;
+  border-radius: 1vw;
+  color: wheat;
+  cursor: pointer;
+  padding: 3vw 6vw;
+  font-family: inherit;
+  font-size: 3vw;
+  letter-spacing: .1vw;
+  transition: border-color .2s, background .2s, color .2s;
+}
+
+.lang-box:hover {
+  border-color: wheat;
+  background: rgba(245, 222, 179, 0.05);
+}
+
+.lang-made-by {
+  position: absolute;
+  bottom: 2vw;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.8vw;
+  letter-spacing: .1vw;
+  margin: 0;
+}
+
+.lang-made-by-link {
+  -webkit-app-region: no-drag;
+  color: wheat;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.lang-made-by-link:hover {
+  opacity: 0.7;
+}

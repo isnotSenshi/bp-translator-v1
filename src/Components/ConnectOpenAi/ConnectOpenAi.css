@@ -1,0 +1,119 @@
+.mainWindow {
+     color: white;
+     padding: 5vw;
+     -webkit-app-region: drag;
+     border: .25vw solid white;
+     border-radius: 1vw;
+     width: 87.5vw;
+     height: 100vh;
+     margin: 1vw;
+     justify-content: center;
+     display: flex;
+}
+
+.custom-input {
+     -webkit-app-region: no-drag;
+     border: .15vw solid white;
+     border-radius: 1vw;
+     outline: none;
+     background: none;
+     box-shadow: none;
+     color: inherit;
+     padding: 1vw;
+     width: 400px;
+     margin: 0;
+     font: inherit;
+     font-size: 3vw;
+}
+
+.custom-text-area {
+     -webkit-app-region: no-drag;
+     border: .15vw solid white;
+     border-radius: 1vw;
+     height: 30vh;
+     -ms-overflow-style: none;
+     width: 60vw;
+     outline: none;
+     background: none;
+     scrollbar-width: none;
+     box-shadow: none;
+     overflow: auto;
+     color: inherit;
+     padding: 1vw;
+     margin: 0;
+     font: inherit;
+     font-size: 3vw;
+     -webkit-border-radius: 1vw;
+     -moz-border-radius: 1vw;
+     -ms-border-radius: 1vw;
+     -o-border-radius: 1vw;
+}
+
+.custom-button {
+     -webkit-app-region: no-drag;
+     background: none;
+     color: wheat;
+     cursor: pointer;
+     border-radius: .5vw;
+     padding: 1vw;
+     font-size: 2vw;
+     font-family: inherit;
+}
+
+.custom-button:hover {
+     border: .5vm solid wheat;
+     border-radius: .5vw;
+     padding: 1vw;
+     font-size: 2vw;
+     font-family: inherit;
+}
+
+.input-container {
+     display: flex;
+     flex-direction: column;
+     gap: 5vw;
+     justify-content: center;
+     align-items: center;
+}
+
+.close-button {
+     -webkit-app-region: no-drag;
+     cursor: pointer;
+     right: 0;
+     position: absolute;
+     top: 0;
+     padding: 5px;
+     margin: 5vw;
+}
+
+.close-button:hover {
+     width: 58px;
+     padding: 0px;
+}
+
+.back-button {
+     position: absolute;
+     left: 0;
+     top: 0;
+     margin: 5vw;
+     font-size: 1.5vw;
+     padding: .5vw 1vw;
+}
+
+.openai-hint {
+     color: rgba(255, 255, 255, 0.5);
+     font-size: 2.2vw;
+     margin: 0;
+     text-align: center;
+}
+
+.openai-link {
+     -webkit-app-region: no-drag;
+     color: wheat;
+     cursor: pointer;
+     text-decoration: none;
+}
+
+.openai-link:hover {
+     color: white;
+}
