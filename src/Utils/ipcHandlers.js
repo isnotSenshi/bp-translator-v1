@@ -133,9 +133,16 @@ export const registerIpcHandlers = (mainWindow) => {
     })
 
     return await new Promise(resolve => {
-      ipcMain.once('crop-done', (ev, croppedDataUrl) => {
-        cropWindow.close()
+      const handler = (ev, croppedDataUrl) => {
+        if (!cropWindow.isDestroyed()) cropWindow.close()
         resolve(croppedDataUrl)
+      }
+      ipcMain.once('crop-done', handler)
+
+      // If the crop window is closed without cropping (e.g. ESC), clean up the listener
+      cropWindow.on('closed', () => {
+        ipcMain.removeListener('crop-done', handler)
+        resolve(null)
       })
     })
   })

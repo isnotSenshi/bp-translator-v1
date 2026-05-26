@@ -12,6 +12,7 @@ const MainButtons = () => {
      const onSnapCrop = async () => {
           const screenshot = await window.api.captureScreen()
           const cropped = await window.api.openCropWindow(screenshot)
+          if (!cropped) return
           window.api.setState('currentBpants', '../assets/bPants/Burgerpants2.webp')
           await window.api.saveImageToRoot(cropped)
      }
