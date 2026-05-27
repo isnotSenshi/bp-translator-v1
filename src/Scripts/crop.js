@@ -5,11 +5,17 @@ window.addEventListener('DOMContentLoaded', () => {
      const bgcanvas = document.getElementById('bgcanvas');
      const overlay = document.getElementById('overlay');
 
+     const loading = document.getElementById('loading');
+
      window.cropApi.onScreenshot(dataUrl => {
           screenshotImg.onload = () => {
                bgcanvas.width = overlay.width = screenshotImg.width;
                bgcanvas.height = overlay.height = screenshotImg.height;
                bgcanvas.getContext('2d').drawImage(screenshotImg, 0, 0);
+               drawOverlay();
+               loading.style.display = 'none';
+               bgcanvas.style.visibility = 'visible';
+               overlay.style.visibility = 'visible';
           };
           screenshotImg.src = dataUrl;
      });

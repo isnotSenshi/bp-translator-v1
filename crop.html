@@ -18,6 +18,18 @@
                top: 0;
                left: 0;
                cursor: crosshair;
+               visibility: hidden;
+          }
+
+          #loading {
+               position: fixed;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               color: white;
+               font-family: monospace;
+               font-size: 18px;
+               opacity: 0.7;
           }
 
           #okBtn {
@@ -32,6 +44,7 @@
 </head>
 
 <body>
+     <div id="loading">Loading...</div>
      <canvas id="bgcanvas"></canvas>
      <canvas id="overlay"></canvas>
      <script src="./src/Scripts/crop.js"></script>
